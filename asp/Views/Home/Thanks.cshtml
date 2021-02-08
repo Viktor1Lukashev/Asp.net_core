@@ -1,0 +1,26 @@
+﻿@model asp.Models.GuestResponse
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<html>
+<head>
+<title>thanks</title>
+</head>
+<body>
+    <p>
+     <h1>Thank you,@Model.Name!</h1>
+        @if (Model.WillAttend==true)
+        {
+            @:it's great that you're coming!
+
+        }
+        else
+        {
+            @:Sorry to hear that you cant make it!
+        }
+     </p>>
+    <p>Click<a asp-action="ListResponses">here</a>to see who is coming.</p>
+    </body>
+</html>
+

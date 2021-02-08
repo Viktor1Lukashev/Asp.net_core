@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "ListResponses";
+}
+
+<h1>ListResponses</h1>
+<h2>Here is the list of people alreading the party</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (asp.Models.GuestResponse r in Model)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Phone</td>
+                    <td>@r.NEmail</td>
+                </tr>
+                }
+            </tbody>
+ </table>
+
+
+

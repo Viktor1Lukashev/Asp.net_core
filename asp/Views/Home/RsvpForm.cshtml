@@ -1,0 +1,36 @@
+﻿@model asp.Models.GuestResponse
+
+@{
+    ViewData["Title"] = "RsvpForm";
+}
+<html>
+<head></head>>
+<body>
+<h1>RsvpForm</h1>
+    <form asp-action="RsvpForm" method="post">
+        <div asp-validation-summary="All"></div>
+<p>
+    <label asp-for="Name">your name:</label>
+    <input asp-for="Name" />
+</p>
+<p>
+    <label asp-for="NEmail">your mail:</label>
+    <input asp-for="NEmail" />
+</p>
+<p>
+    <label asp-for="Phone">your mail:</label>
+    <input asp-for="Phone" />
+</p>
+<p>
+    <label>Will you append&</label>
+    <select asp-for="WillAttend">
+        <option value="">Choose an option</option>
+        <option value="true">Yes, I'll be there</option>
+        <option value="false">No, I'll  not be there</option>
+    </select>
+</p>
+<button type ="submit">Submit RSVP</button>
+</form>
+</body>
+</html>
+
